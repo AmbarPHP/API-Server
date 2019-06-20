@@ -1,10 +1,10 @@
 module.exports = {
-  database: 'ntask',
+  database: 'dental',
   username: '',
   password: '',
   params: {
     dialect: 'sqlite',
-    storage: 'task-db.sqlite',
+    storage: 'dental.sqlite',
     define: {
       underscored: true
     },

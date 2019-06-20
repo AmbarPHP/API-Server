@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataType) => {
 
-  const Users = sequelize.define('Users', {
+  const Dentistas = sequelize.define('Dentistas', {
     id: {
       type: DataType.INTEGER,
       primaryKey: true,
@@ -30,10 +30,10 @@ module.exports = (sequelize, DataType) => {
     }
   });
 
-  Users.associate = (models) => {
-    Users.hasMany(models.Tasks);
+  Dentistas.associate = (models) => {
+    Dentistas.hasMany(models.Presupuestos);
   };
 
-  return Users;
+  return Dentistas;
 
 };

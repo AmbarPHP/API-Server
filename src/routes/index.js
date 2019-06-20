@@ -1,5 +1,7 @@
 module.exports = app => {
   app.get('/', (req, res) => {
-    res.json({status: 'Tasks Api'});
+    res.json({
+      status: 'Tratamientos Api'
+    });
   });
 };
