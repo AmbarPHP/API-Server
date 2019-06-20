@@ -1,16 +1,15 @@
 {
   "name": "rest-api-nodejs-es6",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src --out-dir dist",
+    "build": "babel src --out-dir dist",
     "babel-node": "babel-node src/index.js",
     "dev": "nodemon --exec npm run babel-node",
     "start": "node dist/"
   },
   "keywords": [],
-  "author": "",
+  "author": "marina",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -24,5 +23,14 @@
     "express": "^4.16.3",
     "sequelize": "^4.38.0",
     "sqlite3": "^4.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FaztWeb/nodejs-sequelize-rest-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FaztWeb/nodejs-sequelize-rest-api/issues"
+  },
+  "homepage": "https://github.com/FaztWeb/nodejs-sequelize-rest-api#readme",
+  "description": ""
 }
