@@ -6,6 +6,9 @@ module.exports = (sequelize, DataType) => {
       primaryKey: true,
       autoIncrement: true
     },
+    dentistaId: {
+      type: DataType.INTEGER,
+    },
     status: {
       type: DataType.BOOLEAN,
       allowNull: false,
