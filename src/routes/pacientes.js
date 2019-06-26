@@ -2,7 +2,7 @@ module.exports = app => {
 
   const Pacientes = app.db.models.Pacientes;
 
-  app.get('/pacientes', (req, res) => {
+  app.get('/paciente', (req, res) => {
     Pacientes.findAll()
       .then(result => res.json(result))
       .catch(error => {
@@ -12,7 +12,7 @@ module.exports = app => {
       });
   });
 
-  app.put('/pacientes/:pacientesId', (req, res) => {
+  app.put('/paciente/:pacientesId', (req, res) => {
     Pacientes.update({
         tel: req.body.tel,
         calle: req.body.calle,
@@ -29,7 +29,7 @@ module.exports = app => {
       });
   });
 
-  app.get('/pacientes/:pacientesId', (req, res) => {
+  app.get('/paciente/:pacientesId', (req, res) => {
     Pacientes.findById(req.params.pacientesId, {
         attributes: ['pacientesId', 'name', 'email', 'calle', 'tel']
       })
@@ -41,7 +41,7 @@ module.exports = app => {
       });
   });
 
-  app.delete('/pacientes/:id', (req, res) => {
+  app.delete('/paciente/:id', (req, res) => {
     Pacientes.destroy({
         where: {
           id: req.params.id
@@ -55,7 +55,7 @@ module.exports = app => {
       });
   });
 
-  app.post('/pacientes', (req, res) => {
+  app.post('/paciente', (req, res) => {
     Pacientes.create(req.body)
       .then(result => res.json(result))
       .catch(error => {
